@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged((user) => {
   } else {
     console.log(window.location.pathname);
     
-    if (window.location.pathname === '/public/listprojects.html') {
+    if (window.location.pathname === '/listprojects.html') {
       window.location.href = 'index.html'; 
     }
   }
