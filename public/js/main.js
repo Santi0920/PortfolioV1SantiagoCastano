@@ -6,11 +6,6 @@
   implement Social Network Login with Firebase
 */
 
-/*
-Function onAuthStateChanged(user)
-Write a function to check if a user is logged
-*/
-
 
 window.addEventListener('load', function () {
 
