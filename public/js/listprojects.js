@@ -16,9 +16,11 @@ firebase.auth().onAuthStateChanged((user) => {
     // https://firebase.google.com/docs/reference/js/v8/firebase.User
     var uid = user.uid;
   } else {
-    console.log(window.location.pathname);
+    console.log(window.location.pathname == '/listprojects.html');
+    console.log(window.location.pathname + '  /listprojects.html');
     
-    if (window.location.pathname === '/listprojects.html') {
+    
+    if (window.location.pathname == '/listprojects.html') {
       window.location.href = 'index.html'; 
     }
   }
