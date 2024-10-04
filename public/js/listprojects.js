@@ -10,15 +10,19 @@
 Function onAuthStateChanged(user)
 Write a function to check if a user is logged
 */
-
-
-// function onAuthStateChanged(user){
-//   if(user){
-//     location.href= ""
-//   }else{
-//     firebase.auth()
-//   }
-// }
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/v8/firebase.User
+    var uid = user.uid;
+  } else {
+    console.log(window.location.pathname);
+    
+    if (window.location.pathname === '/public/listprojects.html') {
+      window.location.href = 'index.html'; 
+    }
+  }
+});
 
 window.addEventListener('load', function () {
 
